@@ -1,11 +1,25 @@
-<div align="left">
-  <h3 style="color:#285D91">{{ title }}</h3>
+<h3 align="left" style="color:#285D91">{{ title }}</h3>
 
-  <strong>Employee star:</strong>
+<div align="left" *ngIf="employee_external == true">
+  <strong>workers: </strong>
+  <button (click)="changeExternal(false)">Show employee</button>
+  <ul>
+    <li>{{ workers[0].name }}</li>
+    <li>{{ workers[0].age }}</li>
+    <li>{{ workers[0].position }}</li>
+    <li *ngIf="workers[0].hired == true">Is hired</li>
+    <li *ngIf="workers[0].hired == false">Is not hired</li>
+  </ul>
+</div>
+
+<div align="left" *ngIf="employee_external == false">
+  <strong>Employee star: </strong>
+  <button (click)="changeExternal(true)">Show workers</button>
   <ul>
     <li>{{ employee.name }}</li>
     <li>{{ employee.age }}</li>
     <li>{{ employee.position }}</li>
-    <li>{{ employee.hired }}</li>
+    <li *ngIf="employee.hired == true">Is hired</li>
+    <li *ngIf="employee.hired == false">Is not hired</li>
   </ul>
 </div>
