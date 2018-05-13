@@ -19,6 +19,7 @@ export class EmployeeComponent {
   public workers:Array<Employee>;
   public employee_external:boolean;
   public color:string;
+  public selected_color:string;
   /**
   * constructor
   *
@@ -33,6 +34,7 @@ export class EmployeeComponent {
     ];
     this.employee_external = true;
     this.color = '#285D91';
+    this.selected_color =  '#CCC';
   }
   /**
   * ngOnInit - first method that is executed after the constructor
@@ -49,6 +51,13 @@ export class EmployeeComponent {
   */
   changeExternal(paramt){
     this.employee_external = paramt;
+  }
+  /**
+  * logSelectedColor
+  *
+  */
+  logSelectedColor(){
+    console.log(this.selected_color);
   }
 
 }
