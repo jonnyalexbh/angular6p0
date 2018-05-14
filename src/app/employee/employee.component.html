@@ -13,7 +13,10 @@
     'float': 'right',
     'margin-right': '69%'
   }">&nbsp;</div>
-  <pre><strong>Selected color:</strong> {{selected_color}}</pre>
+  <pre [style.border]="selected_color == 'red' ? '5px solid black' : '1px solid green'">
+    <strong>Selected color:</strong>
+    {{selected_color}}
+  </pre>
   <div style="clear:both"></div>
 </div>
 
