@@ -23,5 +23,12 @@ export class LayoutComponent{
     this.title = 'Templates ngTemplate in angular';
     this.administrator = true;
   }
+  /**
+  * change
+  *
+  */
+  change(value){
+    this.administrator = value;
+  }
 
 }
