@@ -1,8 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Response, Headers } from '@angular/http';
-import { map, filter, scan } from 'rxjs/operators';
-import { Observable } from 'rxjs';
-
+import { HttpClient } from '@angular/common/http';
 /**
 * decorator
 *
@@ -12,13 +9,29 @@ import { Observable } from 'rxjs';
 * RequestService
 *
 */
-export class RequestService{
+export class RequestService {
+
+  public url:string;
+  /**
+  * constructor
+  *
+  */
+  constructor(private _http:HttpClient) {
+    this.url = 'https://jsonplaceholder.typicode.com/posts';
+  }
   /**
   * getTest
   *
   */
-  getTest(){
+  getTest() {
     return 'Hello world from service';
+  }
+  /**
+  * getArticles
+  *
+  */
+  getArticles() {
+    return this._http.get(this.url);
   }
 
 }

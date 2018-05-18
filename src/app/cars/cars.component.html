@@ -2,6 +2,9 @@
 .list-cars{
   margin-left: 60px;
 }
+.list-articles{
+  margin-left: 60px;
+}
 div{
   float :left;
 }
@@ -47,4 +50,14 @@ input[type="text"], span {
       {{row.name}} - {{row.capacity}} - {{row.color}}
     </li>
   </ul>
+</div>
+
+<div class="list-articles">
+  <h3>List of articles</h3>
+  <ul *ngIf="articles">
+    <li *ngFor="let article of articles">
+      {{ article.id }} - {{ article.title }}
+    </li>
+  </ul>
+  <span *ngIf="!articles">loading ...</span>
 </div>
