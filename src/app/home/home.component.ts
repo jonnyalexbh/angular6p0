@@ -18,6 +18,8 @@ export class HomeComponent {
   public title = 'Homepage';
   public clothing_list:Array<string>;
   public hold_save:string;
+
+  public showDate;
   /**
   * constructor
   *
@@ -25,7 +27,7 @@ export class HomeComponent {
   constructor(
     private _clothesService: ClothesService
   ){
-
+    this.showDate = new Date(2017, 4, 26);
   }
   /**
   * ngOnInit - first method that is executed after the constructor

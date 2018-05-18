@@ -1,4 +1,8 @@
-<h2>{{ title }}</h2> <br>
+<h2>{{ title }}</h2>
+
+{{ showDate | date:'dd/MM/yyyy' }}
+
+<br><br>
 
 <input type="text" [(ngModel)]="hold_save">
 <button (click)="savePledge()">Add garment</button>
