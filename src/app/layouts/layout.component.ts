@@ -15,6 +15,12 @@ export class LayoutComponent{
 
   public title;
   public administrator;
+  public external_data = 'Jonnyalexabh';
+  public identity = {
+    id: 1,
+    web: 'Jonnyalexabh.com.co',
+    thematic: 'Web development'
+  };
   /**
   * constructor
   *

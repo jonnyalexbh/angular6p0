@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { CarsComponent } from './cars/cars.component';
 import { LayoutComponent } from './layouts/layout.component';
+import { SonComponent } from './son/son.component';
 
 import { ConverterPipe } from './pipes/converter.pipe';
 
@@ -23,6 +24,7 @@ import { ConverterPipe } from './pipes/converter.pipe';
     ContactComponent,
     CarsComponent,
     LayoutComponent,
+    SonComponent,
     ConverterPipe
   ],
   imports: [
