@@ -16,10 +16,17 @@
 <h4>input properties in angular</h4>
 <son-component
 [text1]="external_data"
-[text2]="identity">
+[text2]="identity"
+(from_son)="receiveData($event)">
 <!--
 <son-component
 [text1]="'value of property one'"
 [text2]="'value of property two'">
 -->
 </son-component>
+
+<div *ngIf="data_of_son">
+  <h1>{{ data_of_son.name }}</h1>
+  <h1>{{ data_of_son.web }}</h1>
+  <h1>{{ data_of_son.twitter }}</h1>
+</div>

@@ -21,6 +21,7 @@ export class LayoutComponent{
     web: 'Jonnyalexabh.com.co',
     thematic: 'Web development'
   };
+  public data_of_son;
   /**
   * constructor
   *
@@ -35,6 +36,14 @@ export class LayoutComponent{
   */
   change(value){
     this.administrator = value;
+  }
+  /**
+  * receiveData
+  *
+  */
+  receiveData(event) {
+    this.data_of_son = event;
+    console.log(this.data_of_son);
   }
 
 }
